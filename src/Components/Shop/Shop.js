@@ -14,13 +14,13 @@ const Shop = () => {
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
-
+    // var item = emptyArray[Math.floor(Math.random()*emptyArray.length)];
     const handleAddToCart = (selectedProduct) => {
         // setCart(selectedProduct);
         const newCart = [...cart,selectedProduct];
         setCart(newCart);
-
     }
+    
 
     return (
         <div className='shop'>
@@ -36,7 +36,8 @@ const Shop = () => {
             </div>
             
             <div className='cart-section'>
-                <Cart cart = {cart}/>
+                <Cart
+                cart = {cart}/>
             </div>
 
         </div>
