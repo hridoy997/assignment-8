@@ -27,18 +27,20 @@ const Cart = (props) => {
     const handleRandomItem = (selectedItem) => {
         item = selectedItem[Math.floor(Math.random()*selectedItem.length)];
         // console.log('selected item',selectedItem);
-        console.log(item);
-        title = item;
+        // console.log(item);
+        // title = item;
         console.log(title);
+        console.log(names);
     }
     
     
     return (
         <div>
             <h1>This is Cart</h1>
-            <div>
+
+            <div className='cart-item'>
                 {
-                    names.map(name => <p>{name}...</p>)
+                    names.map(name => (<p>{name}</p>))
                 }
             </div>
             <div className="button-section">
